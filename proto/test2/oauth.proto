@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package cn.pecs.api.test2.oauth;
+
+import "common/query.proto";
+
+service OauthService {
+    rpc DeleteOauth(OauthDto) returns (OauthResult) {}
+    rpc UpdateOauth(OauthDto) returns (OauthResult) {}
+    rpc GetOauth(OauthDto) returns (OauthResult) {}
+    rpc CreateOauth(OauthDto) returns (OauthResult) {}
+    rpc PageOauth(OauthDto) returns (OauthPage) {}
+}
+
+message OauthResult {
+    int32 code = 1;
+    OauthDto data = 2;
+    string message = 3;
+}
+
+message OauthPage {
+    int32 code = 1;
+    repeated OauthDto data = 2;
+    string message = 3;
+    int32 total = 4;
+    int32 page = 5;
+    int32 size = 6;
+}
+
+message OauthDto {
+    cn.pecs.api.common.query.QueryDto query = 1;
+    int32 id = 2;
+    string provider = 3;
+    int32 status = 4;
+    string code = 5;
+    string username = 6;
+    string password = 7;
+    string avatar = 8;
+    string provider_user_id = 9;
+    string access_token = 10;
+    string refresh_token = 11;
+    int32 expires_in = 12;
+    string created_at = 13;
+    uint32 created_by = 14;
+    string updated_at = 15;
+}

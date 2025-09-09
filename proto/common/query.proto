@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package cn.pecs.api.common.query;
+
+message QueryDto {
+    uint32 page = 1;
+    uint32 size = 2;
+    repeated string desc = 3;
+    repeated string asc = 4;
+    string meta_data = 5;
+    bool force = 6;
+    int32 flag_filter = 7;
+}

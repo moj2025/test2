@@ -1,0 +1,35 @@
+
+// Heartbeat gRPC API
+syntax = "proto3";
+
+
+package cn.pecs.api.common.heartbeat;
+
+// 心跳服务，健康检查用
+service HeartbeatService {
+    // 心跳检测，返回服务状态
+    rpc Heartbeat(HeartbeatRequest) returns (HeartbeatResponse);
+}
+
+
+// 心跳请求
+message HeartbeatRequest {
+    // 客户端唯一标识（可选，便于追踪）
+    string client_id = 1;
+    // 客户端版本号（可选）
+    string client_version = 2;
+    // 预留扩展字段
+    map<string, string> extra = 99;
+}
+
+// 心跳响应
+message HeartbeatResponse {
+    // 状态码，0=OK，非0=异常
+    int32 code = 1;
+    // 响应消息
+    string message = 2;
+    // 服务端时间戳（毫秒）
+    uint64 timestamp = 3;
+    // 预留扩展字段
+    map<string, string> extra = 99;
+}
