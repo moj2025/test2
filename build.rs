@@ -17,10 +17,7 @@ fn main() -> Result<()> {
     }
 
     if proto_files.is_empty() {
-        eprintln!(
-            "Warnning Not found {:?}",
-            proto_root.display()
-        );
+        eprintln!("Warnning Not found {:?}", proto_root.display());
         return Ok(());
     }
 

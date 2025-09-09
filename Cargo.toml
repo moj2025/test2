@@ -4,63 +4,12 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
-
-regex = "1.11"
-serde_yaml = "0.9"
-get_if_addrs = "0.5"
-tracing = "0.1"
-tracing-subscriber = { version = "0.3", features = ["env-filter"] }
-anyhow = "1"
-async-trait = "0.1"
-bitflags = "2.9"
-
-actix-web = "4"
-# sqlx
-sqlx = { version = "0.8", features = [ "mysql", "sqlite", "macros", "runtime-tokio-native-tls", "any", "chrono", "time", "rust_decimal"] }
-
-rudi = "0.8"
-
-clap = { version = "4.5", features = ["derive"] }
-chrono = "0.4"
-
-uuid = { version = "1", features = ["v4"] }
 tokio = { version = "1", features = ["full"] }
-jsonwebtoken = "9"
-
-cron = "0.15"
 
 # tonic
 tonic = "0.14"
 prost = "0.14"
 
-tokio-stream = "0.1"
-etcd-client = "0.16"
-rand = "0.9"
-
-redis = { version = "0.32.4", features = ["r2d2", "tokio-comp", "connection-manager"] }
-r2d2 = "0.8"
-r2d2_redis = "0.14"
-
-sha256 = "1"
-argon2 = "0.5"
-
-# extra gate
-chardetng = "0.1"
-actix-multipart ="0.7"
-reqwest = { version = "0.12", features = ["json"] }
-http = "1"
-# 高效字节处理
-bytes = "1"
-serde_urlencoded = "0.7"
-snowflaker = { version = "0.3", features = ["dynamic"] }
-lettre = "0.11"
-
-futures-util = "0.3"
-encoding_rs = "0.8"
-mime_guess = "2"
 tokio-util = "0.7"
 tonic-prost = "0.14"
 
