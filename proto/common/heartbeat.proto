@@ -3,7 +3,7 @@
 syntax = "proto3";
 
 
-package cn.pecs.api.common.heartbeat;
+package cn.pecs.api.common;
 
 // 心跳服务，健康检查用
 service HeartbeatService {

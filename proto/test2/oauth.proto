@@ -28,7 +28,7 @@ message OauthPage {
 }
 
 message OauthDto {
-    cn.pecs.api.common.query.QueryDto query = 1;
+    cn.pecs.api.QueryDto query = 1;
     int32 id = 2;
     string provider = 3;
     int32 status = 4;

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package cn.pecs.api.common.query;
+package cn.pecs.api;
 
 message QueryDto {
     uint32 page = 1;
